@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const name = prompt();
+        // if (name === "apple") {
+        //     alert("Apples are red or green.")
+        // } else if (name === "banana") {
+        //     alert("Bananas are yellow.")
+        // } else if (name === "orange") {
+        //     alert("Oranges are orange.")
+        // } else {
+        //     alert("unknown fruit.")
+        // }
+        // const deviceType = prompt("enter the device type:");
+
+        // if (deviceType === "mobile") {
+        //     const model = prompt("enter the model:");
+        //     if (model === "iPhone") {
+        //         alert("Apple iPhone: IOS device.")
+        //     }
+        //     else if (model === "Samsung") {
+        //         alert("Samsung Galaxy: Android device.")
+        //     }
+        //     else {
+        //         alert("Unknown phone model.")
+        //     }
+
+
+        // } else if (deviceType === "tablet") {
+        //     const model = prompt("enter the model:");
+        //     if (model === "iPad") {
+        //         alert("Apple iPhone: IOS device.")
+        //     }
+        //     else if (model === "Galaxy Tab") {
+        //         alert("Samsung Galaxy Tab: Android device.")
+        //     }
+        //     else {
+        //         alert("Unknown phone model.")
+        //     }
+        // } else if (deviceType === "laptop") {
+        //     const model = prompt("enter the model:");
+        //     if (model === "MacBook") {
+        //         alert("Apple iPhone: macOS device.")
+        //     }
+        //     else if (model === "Dell") {
+        //         alert("Dell XPS: Windows device.")
+        //     }
+        //     else {
+        //         alert("Unknown laptop model.")
+        //     }
+        // } else {
+        //     alert("Unknown device type.")
+        // }
+        const deviceType = prompt();
+        const model = prompt();
+        switch (deviceType) {
+
+            case "mobile":
+                switch (model) {
+                    case "iPhone": alert("Apple iPhone: IOS device.");
+                        break;
+                    case "Samsung": alert("Samsung Galaxy: Android device.");
+                        break;
+                    default: alert("Unknown phone model.");
+                }
+            break;
+            case "tablet":
+                switch (model) {
+                    case "iPad": alert("Apple iPad: IOS device.");
+                        break;
+                    case "Galaxy Tab": alert("Samsung Galaxy Tab: Android device.");
+                        break;
+                    default: alert("Unknown tablet model.")
+                }
+            break;
+            case "laptop":
+                switch (model){
+                    case "MacBook":alert("Apple MacBook: IOS device.");
+                    break;
+                    case "Dell":alert("Dell XPS: Windows device");
+                    break;
+                    default:alert("Unknown laptop model");
+                }
+            default:alert("Unknown device type.")
+
+        }
+    </script>
+</body>
+
+</html>

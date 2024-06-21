@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    width: 1200px;
+    margin:auto;background-color: grey;
+}
+main{
+    width: 600px;margin: auto;
+}
+header{
+    background-color: blue;
+    width: 100%;
+    align-content: center;padding: 20px 10px;
+}
+#list-header{
+display: flex;
+width: 500px;margin: auto;justify-content: space-between;
+color:white;
+}
+#list-header-count{
+    background-color:violet ;
+    width: 50px;border-radius: 20px;height: 30px;align-content: center;
+    text-align: center;
+}
+
+#button{
+    width:200px;margin: auto;
+ 
+}
+#input-division{
+    width: 550px;margin:auto;margin-top:-17px;
+}
+#input{
+    width: 550px;margin:auto;padding: 20px 20px;
+    padding-bottom: 30px;border-radius: 40px;
+}
+
+button{
+    background-color: blue;width: 200px;
+    border-radius: 20px;padding: 20px 10px;color: white;
+}
+#list{
+    background-color: white;
+    margin-top: 20px;
+}
+#Todo-list{
+    padding: 0 30px;
+}
+.todo-input{
+    display: flex;border-bottom:red solid 2px;
+    justify-content:space-between;align-items: center;
+    padding: 40px 0;
+}
+.view-list{
+    display: flex;gap: 30px;align-items: center;
+    overflow: hidden;
+}
+
+.view-list__icon{
+    display: flex;align-items: center;
+    gap: 30px;
+}
+button:hover{
+    cursor: pointer;
+}
+.material-symbols-outlined:hover{
+    cursor: pointer;
+}
+input:hover{
+    cursor: pointer;
+}
+
+/* #check:checked+#view-list__text::after{
+content: "done";font-size: 20px;color: black;margin-left: 100px;
+} */
+
+
+
+
+

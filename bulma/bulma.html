@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo list</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <main class="container column is-three-fifths
+      is-offset-one-fifth" style="font-size: 50px">
+        <header class="is-justify-content-space-between is-flex is-align-items-center title" style="
+          padding: 20px 20px;
+          background-image: linear-gradient(to right,red,orange,yellow,green,blue,indigo, violet);
+        ">
+            <div style="font-size: 50px; margin: 0">ToDo list</div>
+            <div>0/6</div>
+        </header>
+        <section id="action">
+            <!-- <div class="card" style="border-radius: 30px">
+          <div class="card-content">
+            <div class="content">text</div>
+          </div>
+        </div> -->
+        </section>
+        <footer>
+            <div class="control">
+                <input id="input" class="input is-focused" type="text" placeholder="what's next?"
+                    style="border-radius: 30px; padding: 40px 40px" />
+            </div>
+            <div class="is-flex is-justify-content-center">
+                <button style="width: 300px; padding: 20px 0; font-size: 30px" class="button is-link is-rounded"
+                    onclick="run();">
+                    Add-task
+                </button>
+            </div>
+        </footer>
+    </main>
+    <script src="Todo2.js"></script>
+</body>
+
+</html>
