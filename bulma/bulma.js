@@ -1,5 +1,6 @@
-const list = [];
 
+const taskString = localStorage.getItem("list");
+const list = JSON.parse(taskString) || [];
 const todo = document.getElementById("action");
 
 function addTask() {
@@ -21,6 +22,12 @@ function checkbox(i){
     
     render();
 }
+function addEnter(event){
+  if(event.key == "Enter"){
+    addTask();
+  }
+}
+
 
 function render() {
   let task = "";
@@ -36,7 +43,7 @@ function render() {
                         <span class="material-symbols-outlined" onclick="editTask(${i})">
                             edit
                         </span>
-                        <span class="material-symbols-outlined ml-6" onclick="deleteTask(${i}),reserveCount()">
+                        <span class="material-symbols-outlined ml-6" onclick="deleteTask(${i})">
                             delete
                         </span>
                     </div>
@@ -44,6 +51,16 @@ function render() {
     task += oneTask;
   }
   todo.innerHTML = task;
+  localStorage.setItem("list",JSON.stringify(list));
+  let countDone = 0;
+  for(let i = 0;i < list.length; i++){
+    if(list[i].status === "done"){
+      countDone++;
+    }
+  }
+
+  document.getElementById("list-header-count").innerText = `${countDone} / ${list.length}`;
+
 }
 render();
 function deleteTask(position) {
@@ -64,20 +81,5 @@ function placeholder() {
   // asuuh heseg
   document.getElementById("input").value = "";
 }
-function count() {
-  const number = document.getElementById("list-header-count");
-  let count;
-  for (let i = 0; i < list.length; i++) {
-    count = i + 1;
-  }
-  number.innerText = count;
-}
-function reserveCount() {
-  const number = document.getElementById("list-header-count");
-  let count;
-  for (let i = list.length; i > list.length - 1; i--) {
-    count = i;
-  }
-  number.innerText = count;
-}
+
 
