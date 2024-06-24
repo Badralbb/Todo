@@ -1,6 +1,6 @@
 const list = [];
 
-const todo = document.getElementById("Todo-list");
+const todo = document.getElementById("action");
 
 function addTask() {
     const input = document.getElementById("input").value;
@@ -26,17 +26,17 @@ function render() {
   let task = "";
   for (let i = 0; i < list.length; i++) {
     
-    const oneTask = `<div class="todo-input">
+    const oneTask = `<div class="todo-input is-flex is-justify-content-space-between is-align-items-center">
                    
-                    <div class="view-list">
+                    <div class="view-list is-flex ">
                         <input onclick="checkbox(${i})" type="checkbox" class="checkbox" ${list[i].status === "done" ? "checked" : ""}>
-                        <div id="view-list__text">${list[i].status === "done" ? `<s> ${list[i].name}</s>`: list[i].name}</div>
+                        <div class="ml-6" id="view-list__text">${list[i].status === "done" ? `<s> ${list[i].name}</s>`: list[i].name}</div>
                     </div>
-                    <div class="view-list__icon">
+                    <div class="view-list__icon is-flex">
                         <span class="material-symbols-outlined" onclick="editTask(${i})">
                             edit
                         </span>
-                        <span class="material-symbols-outlined" onclick="deleteTask(${i}),reserveCount()">
+                        <span class="material-symbols-outlined ml-6" onclick="deleteTask(${i}),reserveCount()">
                             delete
                         </span>
                     </div>
@@ -53,10 +53,10 @@ function deleteTask(position) {
   }
 }
 function editTask(position) {
-  const oldvalue = list[position];
+  const oldvalue = list[position].name;
   const name = prompt("edit task", oldvalue);
   if (name != null) {
-    list[position] = name;
+    list[position].name = name;
     render();
   }
 }

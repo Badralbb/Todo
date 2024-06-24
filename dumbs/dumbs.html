@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dumbs list</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="style.css">
+        <style>
+          span:hover{
+            cursor: pointer;
+          }
+         body{
+            background-color: pink;height: 100vh;
+         }
+        </style>
+</head>
+
+<body>
+    <div class="heart">
+        <main class="container column is-three-fifths
+        is-offset-one-fifth" style="font-size: 50px">
+          <header class="is-justify-content-space-between is-flex is-align-items-center title" style="
+            padding: 20px 20px;
+            background-image: linear-gradient(to right,red,orange,yellow,green,blue,indigo, violet);
+          ">
+              <div style="font-size: 50px; margin: 0"> only Dumbs list</div>
+              <div id="list-header-count">0</div>
+          </header>
+          <section id="action">
+              <!-- <div class="card" style="border-radius: 30px">
+            <div class="card-content">
+              <div class="content">text</div>
+            </div>
+          </div> -->
+          </section>
+          <footer>
+              <div class="control">
+                  <input id="input" class="input is-danger" type="text" placeholder="what's next?"
+                      style="border-radius: 30px; padding: 40px 40px" />
+              </div>
+              <div class="is-flex is-justify-content-center">
+                  <button style="width: 300px; padding: 20px 0; font-size: 30px" class="button is-danger is-rounded"
+                      onclick="addTask(),reserveCount(),count(),placeholder()">
+                      Add-task
+                  </button>
+              </div>
+          </footer>
+          <div id="dumbs">DUBMS_4EVER</div>
+          <div></div>
+  
+      </main>
+    </div>
+   
+    <!-- <div class="heart"></div> -->
+    <script src="dumbs.js"></script>
+    
+</body>
+
+</html>
